@@ -112,10 +112,6 @@ candidates.layer.4 <- candidates.layer.4[order(-score,-LFC),]
 candidates.layer.4 <- candidates.layer.4[which(candidates.layer.4$score >= 1),]
 print(c("The number of Candidates in the fourth layer is:",dim(candidates.layer.4)[1]))
 write.table(candidates.layer.4,candidate.fourth.layer.file,sep="\t",col.names = T,row.names = F)
-candidates.layer.4.genes = gene_rank[gene_rank$score > 0,1]
-candidates.layer.4.genes.disease = intersect(gene.mirna.diseaseSet.nwNodes,candidates.layer.4.genes)
-print(c("The number of Candidates in the third layer which have been experimentally validated:",length(candidates.layer.4.genes.disease)))
-
 ##########################################################
 ### TopControl Candidates in the fifth Layer 
 ##########################################################
