@@ -63,9 +63,6 @@ mcds = rep(0,dim(nw_nodes)[1])
 hub = rep(0,dim(nw_nodes)[1])
 disease_associated = rep(0,dim(nw_nodes)[1])
 degree = rep(0,dim(nw_nodes)[1])
-meanA = rep(0,dim(nw_nodes)[1])
-meanB = rep(0,dim(nw_nodes)[1])
-FC = rep(0,dim(nw_nodes)[1])
 LFC = rep(0,dim(nw_nodes)[1])
 
 ##########################################################
@@ -92,9 +89,6 @@ for (i in 1: dim(nw_nodes)[1]){
     degree[i] = res
   }
   if (nw_nodes[i,1] %in% DE_nodes$id){
-    meanA[i] = DE_nodes[which(DE_nodes$id %in% nw_nodes[i,1]),]$baseMeanA
-    meanB[i] = DE_nodes[which(DE_nodes$id %in% nw_nodes[i,1]),]$baseMeanB
-    FC[i] = DE_nodes[which(DE_nodes$id %in% nw_nodes[i,1]),]$foldChange
     LFC[i] = DE_nodes[which(DE_nodes$id %in% nw_nodes[i,1]),]$log2FoldChange
     LFC[i] = abs(round(LFC[i],digits = 2))
   }
