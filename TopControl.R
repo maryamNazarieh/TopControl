@@ -3,7 +3,7 @@
 #  - September 2017                       #
 #  - Copyright: Maryam Nazarieh           #
 ###########################################
-setwd("~/Desktop/TopControl_package/Example/")
+setwd("~/Desktop/TopControl-master/Example/")
 ##########################################################
 ### input files #######
 ##########################################################
