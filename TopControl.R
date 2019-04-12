@@ -31,7 +31,7 @@ disease.name = 'Breast Neoplasms'
 ### Node Degree Computation ######
 ##########################################################
 library(igraph)
-nw = read.table(networkw.File,sep="\t")
+nw = read.delim(networkw.File,sep="\t")
 graph = graph.data.frame(nw,directed=FALSE,vertices=NULL)
 v <- get.data.frame(graph, what="vertices")
 e <- get.data.frame(graph, what="edges")
